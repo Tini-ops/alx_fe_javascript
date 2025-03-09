@@ -34,5 +34,9 @@ function createAddQuoteForm () {
     submitButton.textContent = "Add Quote"; //name of the button
     submitButton.type = "submit";
 
+    document.getElementById("addQuoteBtn").addEventListener("click", addQuote);
+    document.getElementById("showNewQuoteBtn").addEventListener("click", showNewQuote);
+    
+
 
 }
