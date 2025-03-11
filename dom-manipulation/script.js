@@ -1,10 +1,14 @@
-const quotes = [
+/*const quotes = [
     { text: "The only way to do great work is to love what you do.", category: "Motivation" },
     { text: "Success is not final, failure is not fatal: it is the courage to continue that counts.", category: "Perseverance" },
     { text: "Believe you can and you're halfway there.", category: "Confidence" },
     { text: "Do what you can, with what you have, where you are.", category: "Action" },
     { text: "Act as if what you do makes a difference. It does.", category: "Inspiration" }
-];
+];*/
+
+let quotes = JSON.parse(localStorage.getItem("quotes")) || [
+    { text: "The best way to predict the future is to create it.", category: "Motivation" },
+]
 
 const quoteDisplay = document.getElementById("quoteDisplay");
 const newQouteButton = document.getElementById("newQuote");
@@ -36,7 +40,10 @@ function createAddQuoteForm () {
 
     document.getElementById("addQuoteBtn").addEventListener("click", addQuote);
     document.getElementById("showNewQuoteBtn").addEventListener("click", showNewQuote);
-    
-
 
 }
+
+function saveQuotesToLocalStorage() {
+    localStorage.setItem("quotes", JSON.stringify(quotes));
+}
+
