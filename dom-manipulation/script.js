@@ -15,14 +15,6 @@ const newQouteButton = document.getElementById("newQuote");
 const formContainer = document.createElement("div");
 document.body.appendChild(formButton);
 
-function createFormAndButtons() {
-    const formDiv = document.createElement("div");
-    formDiv.innerHTML = `
-        <input id="newQuoteText" type="text" placeholder="Enter a new quote" />
-        <input id="newQuoteCategory" type="text" placeholder="Enter quote category" />
-        <button id="addQuoteBtn">Add Quote</button>
-        <button id="exportQuotesBtn">Export Quotes</button>
-    `;
 
 
 function showRandomQuote () {
